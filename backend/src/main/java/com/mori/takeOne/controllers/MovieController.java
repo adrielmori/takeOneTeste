@@ -15,7 +15,7 @@ import com.mori.takeOne.services.MovieService;
  * Classe que implemetna o EndPoint; Endereço do navegador que responde uma
  * página de filme
  * 
- * @author Adriel L. V. Mori & Nélio Alves
+ * @author Adriel L. V. Mori, Igor Pádua e Bruna Espírito
  */
 
 @RestController

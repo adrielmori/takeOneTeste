@@ -13,7 +13,7 @@ import javax.persistence.Table;
 /**
  * Classe para implementação dos objetos relacionados aos atributos dos filmes
  * 
- * @author Adriel L. V. Mori & Nélio Alves
+ * @author Adriel L. V. Mori, Igor Pádua e Bruna Espírito
  */
 
 @Entity

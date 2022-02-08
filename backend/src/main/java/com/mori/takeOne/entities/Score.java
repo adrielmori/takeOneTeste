@@ -8,7 +8,7 @@ import javax.persistence.Table;
  * Classe para implementação da cahve primária para relacionar os dados do
  * usuário e do filme classificado de forma úninca.
  * 
- * @author Adriel L. V. Mori & Nélio Alves
+ * @author Adriel L. V. Mori, Igor Pádua e Bruna Espírito
  */
 
 /*

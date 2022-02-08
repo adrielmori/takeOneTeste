@@ -14,7 +14,7 @@ import com.mori.takeOne.services.ScoreService;
  * Classe que implemetna o EndPoint; Tratamento de casos para as entradas dos
  * usuários
  * 
- * @author Adriel L. V. Mori & Nélio Alves
+ * @author Adriel L. V. Mori, Igor Pádua e Bruna Espírito
  */
 
 @RestController

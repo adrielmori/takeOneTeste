@@ -16,7 +16,7 @@ function MovieScore({ score , count } : Props) {
         se for false, mostra o traço - sem avaliação ainda. */}
       </p>
       <MovieStars score={score}/>
-      <p className="dsmovie-score-count">{count} avaliações</p>
+      <p className="dsmovie-score-count">{count} assessments</p>
     </div>
   );
 }

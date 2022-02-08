@@ -3,7 +3,7 @@ package com.mori.takeOne;
 /**
  * Página principal para implementação das fontes 
  * em Java com as demais classes.
- * @author Adriel L. V. Mori & Nélio Alves
+ * @author Adriel L. V. Mori, Igor Pádua e Bruna Espírito
  */
 
 import org.springframework.boot.SpringApplication;

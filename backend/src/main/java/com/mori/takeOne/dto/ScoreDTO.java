@@ -3,7 +3,7 @@ package com.mori.takeOne.dto;
 /**
  * Classe de entrada do usuário para a avaliçao do filme.
  * 
- * @author Adriel L. V. Mori & Nélio Alves
+ * @author Adriel L. V. Mori, Igor Pádua e Bruna Espírito
  */
 
 public class ScoreDTO {

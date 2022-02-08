@@ -3,7 +3,7 @@ package com.mori.takeOne.config;
 /**
  * Segurança de Corse: Como o backend e o frontend estão 
  * hospedados em host diferentes, temos que liberer
- * @author Adriel L. V. Mori & Nélio Alves
+ * @author Adriel L. V. Mori, Igor Pádua e Bruna Espírito
  */
 
 import java.util.Arrays;

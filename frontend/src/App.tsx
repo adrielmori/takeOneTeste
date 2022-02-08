@@ -2,19 +2,26 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "components/Navbar"; /* Componente React navBar: função do JS  */
-import Listing from 'pages/Listing'; /* Página de listagem de filmes */
-import Form from 'pages/Form'; /* Página de formulário */
+import Listing from "pages/Listing"; /* Página de listagem de filmes */
+import Form from "pages/Form"; /* Página de formulário */
+import Login from "components/FormLogin";
 
 function App() {
   /* navebar para o HTML */
 
   return (
-    <BrowserRouter> {/* Ininciar configuração da rota para padronizar o Navbar da interface */}
+    <BrowserRouter>
+      {" "}
+      {/* Ininciar configuração da rota para padronizar o Navbar da interface */}
       <Navbar /> {/* A parte de cima da aplicação */}
-      <Routes> {/* Configura cada página individualmente */}
+      <Routes>
+        {" "}
+        {/* Configura cada página individualmente */}
+        <Route path="/login" element={<Login />} />
         <Route path="/" element={<Listing />} />
         <Route path="/form">
-          <Route path=":movieId" element={<Form />} /> {/* Configura para cada Id de cada Filme */}
+          <Route path=":movieId" element={<Form />} />{" "}
+          {/* Configura para cada Id de cada Filme */}
         </Route>
       </Routes>
     </BrowserRouter>

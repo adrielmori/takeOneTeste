@@ -6,7 +6,7 @@ import com.mori.takeOne.entities.Movie;
  * Classe com os memos components do Movie, porém não está relacionado ao banco
  * de dados.
  * 
- * @author Adriel L. V. Mori & Nélio Alves
+ * @author Adriel L. V. Mori, Igor Pádua e Bruna Espírito
  */
 
 public class MovieDTO {
