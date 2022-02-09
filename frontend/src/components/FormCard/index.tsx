@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from "axios";
+import axios,{ AxiosRequestConfig } from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Movie } from "types/movie";
@@ -14,47 +14,46 @@ type Props = {
 function FormCard({ movieId }: Props) {
   //Para capturar a rota da página do filme escolhido
 
-  const navigate = useNavigate(); //redirecionamento de rota
+  const navigate = useNavigate();//redirecionamento de rota
 
   //buscando filme a partir do Id
   const [movie, setMovie] = useState<Movie>();
 
   useEffect(() => {
-    axios
-      .get(`${BASE_URL}/movies/${movieId}`) //Requisição esecífica do Id informado
-      .then((response) => {
+    axios.get(`${BASE_URL}/movies/${movieId}`) //Requisição esecífica do Id informado
+      .then(response => {
         setMovie(response.data); //objeto do corpo da resposta
       });
-  }, [movieId]); //Arguemento será a dependencia. Para encerrar a requisição
+  }, [movieId]);//Arguemento será a dependencia. Para encerrar a requisição
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    //pegando dados do formulário
+  const handleSubmit = (event : React.FormEvent<HTMLFormElement>) => {//pegando dados do formulário
 
-    event.preventDefault(); //empede que o formulário seja enviado
-    const email = (event.target as any).email.value; //acessando input do email
+    event.preventDefault();//empede que o formulário seja enviado
+    const email = (event.target as any).email.value;//acessando input do email
     const score = (event.target as any).score.value;
 
-    if (!validateEmail(email)) {
+    if(!validateEmail(email)){
       return;
     }
 
     //Requisição put para a API
     const config: AxiosRequestConfig = {
       baseURL: BASE_URL,
-      method: "PUT",
-      url: "/scores",
+      method: 'PUT',
+      url: '/scores',
       data: {
         email: email,
         movieId: movieId,
-        score: score,
-      },
-    };
+        score: score
+      }
+    }
 
-    axios(config).then((response) => {
+    axios(config).then(response => {
       //console.log(response.data);
       navigate("/"); //listagem
-    });
-  };
+    })
+
+  }
 
   return (
     <div className="dsmovie-form-container">
@@ -69,11 +68,7 @@ function FormCard({ movieId }: Props) {
           {" "}
           {/* Comandos do usuário */}
           <div className="form-group dsmovie-form-group">
-            <label htmlFor="email"></label>
-            <input type="email" className="form-control" id="email" />
-          </div>
-          <div className="form-group dsmovie-form-group">
-            <label htmlFor="score">Inform your evaluarion</label>
+            <label htmlFor="score">Inform your evaluation</label>
             <select className="form-control" id="score">
               <option>1</option>
               <option>2</option>
@@ -91,7 +86,7 @@ function FormCard({ movieId }: Props) {
         <Link to="/">
           {" "}
           {/* Volta para a página inicial da Listagem */}
-          <button className="btn btn-primary dsmovie-btn mt-3">Cancel</button>
+          <button className="btn btn-primary dsmovie-btn-cancel mt-3">Cancel</button>
         </Link>
       </div>
     </div>
