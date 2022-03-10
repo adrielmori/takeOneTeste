@@ -17,7 +17,7 @@ function Login() {
 	e.preventDefault();
 
 	console.log("submit", {email});
-	 login(email)
+	 login!(email)
   }
 
   return (
