@@ -24,6 +24,7 @@ public class Score {
 	private ScorePK id = new ScorePK();//Chave primária
 
 	private Double value;
+	private String comentario;
 
 	public Score() {
 
@@ -53,6 +54,14 @@ public class Score {
 
 	public void setValue(Double value) {
 		this.value = value;
+	}
+
+	public void setComentario(String comentario) {
+		this.comentario = comentario;
+	}
+
+	public String getComentario() {
+		return comentario;
 	}
 
 }

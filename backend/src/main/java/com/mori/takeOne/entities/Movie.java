@@ -28,6 +28,8 @@ public class Movie {
 	private Double score; // Tipo que são classe: maíusculo para aplicações em banco de dados
 	private Integer count;
 	private String image;
+	private String trailer;
+	private String description;
 
 	@OneToMany(mappedBy = "id.movie")
 	private Set<Score> scores = new HashSet<>();
@@ -38,12 +40,14 @@ public class Movie {
 
 	}
 
-	public Movie(Long id, String title, Double score, Integer count, String image) {
+	public Movie(Long id, String title, Double score, Integer count, String image, String trailer, String description) {
 		this.id = id;
 		this.title = title;
 		this.score = score;
 		this.count = count;
 		this.image = image;
+		this.trailer = trailer;
+		this.description = description;
 	}
 
 	public Long getId() {
@@ -88,6 +92,22 @@ public class Movie {
 
 	public Set<Score> getScores() {
 		return scores;
+	}
+
+	public void setTrailer(String trailer) {
+		this.trailer = trailer;
+	}
+
+	public String getTrailer() {
+		return trailer;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }

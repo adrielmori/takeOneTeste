@@ -48,7 +48,6 @@ public class ScoreService {
 
 		double sum = 0.0;
 		for (Score s : movie.getScores()) {// lista de score associada ao filme
-
 			sum = sum + s.getValue();// soma de todas as notas
 		}
 
