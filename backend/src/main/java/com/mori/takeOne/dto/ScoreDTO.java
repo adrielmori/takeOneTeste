@@ -11,7 +11,7 @@ public class ScoreDTO {
 	private Long movieId;
 	private String email;
 	private Double score;
-	private String comentario;
+	private String comment;
 
 	public ScoreDTO() {
 
@@ -41,12 +41,12 @@ public class ScoreDTO {
 		this.score = score;
 	}
 
-	public void setComentario(String comentario) {
-		this.comentario = comentario;
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
 
-	public String getComentario() {
-		return comentario;
+	public String getComment() {
+		return comment;
 	}
 
 }

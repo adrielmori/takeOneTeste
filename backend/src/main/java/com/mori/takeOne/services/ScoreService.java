@@ -43,7 +43,7 @@ public class ScoreService {
 		score.setMovie(movie);
 		score.setUser(user);
 		score.setValue(dto.getScore());
-		score.setComentario(dto.getComentario());
+		score.setComment(dto.getComment());
 
 		score = scoreRepository.saveAndFlush(score);// salvando no banco de dados o score
 
