@@ -29,9 +29,11 @@ function FormCard({ movieId }: Props) {
   const handleSubmit = (event : React.FormEvent<HTMLFormElement>) => {//pegando dados do formulário
 
     event.preventDefault();//empede que o formulário seja enviado
-    // const email = (event.target as any).email.value;//acessando input do email
-    var tam = localStorage.getItem("user")!.length;
-    const email = localStorage.getItem("user")?.slice(1, tam - 1)
+    var email;//acessando input do email
+    if (localStorage.getItem("user") != null) {
+      var tam = localStorage.getItem("user")!.length;
+      email = localStorage.getItem("user")?.slice(1, tam - 1)
+    }
     const score = (event.target as any).score.value;
 
     if (!validateEmail(email)) {

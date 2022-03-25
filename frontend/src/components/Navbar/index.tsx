@@ -5,6 +5,13 @@ import "./styles.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+
+  var user = "user";
+  if (localStorage.getItem("user") != null) {
+    var tam = localStorage.getItem("user")!.length;
+    user = localStorage.getItem("user")!.slice(1, tam - 1);
+  }
+
   return (
     <header>
       <nav className="container">
@@ -19,7 +26,7 @@ function Navbar() {
               <PerfilIcon />
               {/**/}
               {/* Esta em tag por conta de ser um componente react, com tag de HTML */}
-              <p className="dsmovie-contact-link">Login</p>
+              <p className="dsmovie-contact-link">{user}</p>
             </div>
           </Link>
           {/* Refenciando o link do Git */}
