@@ -36,11 +36,7 @@ export const AuthProvider: FC = ({children}) => {
 	const login = (email:any) => {
 		console.log("login auth", {email});
 
-		const loggedUser = {
-			email,
-		}
-
-		localStorage.setItem("user", JSON.stringify(loggedUser))
+		localStorage.setItem("user", JSON.stringify(email))
 
 		setUser(email)
 		navigate("/")
