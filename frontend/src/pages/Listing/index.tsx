@@ -28,7 +28,7 @@ function Listing() {
     //Para fazer uma requisição
     //Tem que passar a difinição Base Url definido no requisitos
     axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=id`)//sort=id: garante que a busca do filme será por ordem de Id;
-    //sort=title garante que será em ordem afalbética do titulo;
+      //sort=title garante que será em ordem afalbética do titulo;
       .then(response => {
         const data = response.data as MoviePage;
         setPage(data);
@@ -37,13 +37,13 @@ function Listing() {
 
   //Redenrizando com os objetos do
 
-  const  handlePageChange = (newPageNumber : number) => {//muda o status da página; Atualiza o useState
+  const handlePageChange = (newPageNumber: number) => {//muda o status da página; Atualiza o useState
     setPageNumber(newPageNumber);
-    }
+  }
 
   return (
     <>
-      <Pagination page={page} onChange={handlePageChange}/>{/*  */}
+      <Pagination page={page} onChange={handlePageChange} />{/*  */}
       {/* Aplicando as setas para que a paginação */}
 
       <div className="container">

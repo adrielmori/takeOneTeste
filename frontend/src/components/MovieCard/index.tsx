@@ -7,7 +7,7 @@ type Props = {
 }
 
 //Objeto movie que irá chegar como arguemento para a função 
-function MovieCard( { movie } : Props) {
+function MovieCard({ movie }: Props) {
   return (
     <div>
       <img

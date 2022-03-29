@@ -1,9 +1,13 @@
-import React, {createContext, FC, useEffect} from "react";
+import React, { createContext, FC, useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 
 type user = {
-		email: string
+	email: string
+}
+
+function refreshPage() {
+	window.location.reload();
 }
 
 export interface AuthContextInterface {
@@ -11,15 +15,14 @@ export interface AuthContextInterface {
 	authenticated?: boolean
 	loading?: boolean
 	login?: (user: string) => void
-	logout?: () => void
 }
 
 export const AuthContext = createContext<AuthContextInterface>({})
 
-export const AuthProvider: FC = ({children}) => {
+export const AuthProvider: FC = ({ children }) => {
 
 	const navigate = useNavigate();
-	
+
 	const [user, setUser] = useState(null);
 	const [loading, setLoading] = useState(true);
 
@@ -32,25 +35,20 @@ export const AuthProvider: FC = ({children}) => {
 
 		setLoading(false);
 	}, [])
-	
-	const login = (email:any) => {
-		console.log("login auth", {email});
+
+	const login = (email: any) => {
+		console.log("login auth", { email });
 
 		localStorage.setItem("user", JSON.stringify(email))
 
 		setUser(email)
 		navigate("/")
+		refreshPage()
 	};
 
-	const logout = () => {
-		setUser(null);
-		localStorage.removeItem("user")
-		navigate("/login")
-	};
- 
 	return (
-		<AuthContext.Provider 
-			value={{authenticated: !!user, user, loading, login, logout}}>
+		<AuthContext.Provider
+			value={{ authenticated: !!user, user, loading, login }}>
 			{children}
 		</AuthContext.Provider>
 	)

@@ -1,22 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 /* fontes retiradas pelo google Leapis */
 :root {
   --color-primary: #131121;
 }
 
-* {/* "*" reprenta que todos os caracteres serão deste formato*/
-    box-sizing: border-box; /* Para que as palavras se
+* {
+  /* "*" reprenta que todos os caracteres serão deste formato*/
+  box-sizing: border-box; /* Para que as palavras se
     encaixem dinamicamente na box */
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Escolhe cor do fundo da página*/
-html, body {
-    background-color: #e8e8e8;
+html,
+body {
+  background-color: #e8e8e8;
 }
 
 /* Links sem grifagem */
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
   color: unset;
 }

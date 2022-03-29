@@ -1,4 +1,4 @@
-import axios,{ AxiosRequestConfig } from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Movie } from "types/movie";
@@ -26,7 +26,7 @@ function FormCard({ movieId }: Props) {
       });
   }, [movieId]);//Arguemento será a dependencia. Para encerrar a requisição
 
-  const handleSubmit = (event : React.FormEvent<HTMLFormElement>) => {//pegando dados do formulário
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {//pegando dados do formulário
 
     event.preventDefault();//empede que o formulário seja enviado
     var email;//acessando input do email

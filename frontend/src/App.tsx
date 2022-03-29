@@ -12,32 +12,30 @@ function App() {
   /* navebar para o HTML */
 
 
-	const {loading} = useContext(AuthContext)
+  const { loading } = useContext(AuthContext)
 
-	if (loading) {
-		return <div className="loading">Carregando...</div>;	
-	}
-
-
+  if (loading) {
+    return <div className="loading">Carregando...</div>;
+  }
 
   return (
     <BrowserRouter>
       {" "}
       {/* Ininciar configuração da rota para padronizar o Navbar da interface */}
       <Navbar /> {/* A parte de cima da aplicação */}
-	      <AuthProvider>
-	       <Routes>
-	       {" "}
-       	         {/* Configura cada página individualmente */}
-                <Route path="/login" element={<Login />} />
-		<Route path="/" element={<Listing />} />
-                <Route path="/form">
-                <Route path=":movieId" element={<Form />} />{" "}
-                {/* Configura para cada Id de cada Filme */}
-                </Route>
-      </Routes>
-	      </AuthProvider>
-      
+      <AuthProvider>
+        <Routes>
+          {" "}
+          {/* Configura cada página individualmente */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Listing />} />
+          <Route path="/form">
+            <Route path=":movieId" element={<Form />} />{" "}
+            {/* Configura para cada Id de cada Filme */}
+          </Route>
+        </Routes>
+      </AuthProvider>
+
     </BrowserRouter>
   );
 }

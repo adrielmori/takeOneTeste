@@ -42,7 +42,7 @@ function Star({ fill }: StarProps) {
   }
 }
 
-function MovieStar({ score } : Props) {
+function MovieStar({ score }: Props) {
   const fills = getFills(score); //montando o vetor de score um a um
 
   return (
