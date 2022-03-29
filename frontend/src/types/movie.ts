@@ -4,6 +4,8 @@ export type Movie = {
     score: number;
     count: number;
     image: string;
+    trailer: string;
+    description: string;
 }
 
 //definição do tipo

@@ -68,6 +68,8 @@ function FormCard({ movieId }: Props) {
       />
       <div className="dsmovie-card-bottom-container">
         <h3>{movie?.title}</h3>
+        <h4>{movie?.description}</h4>
+        <iframe width="100%" height="250"src={movie?.trailer} frameBorder="0"></iframe>
         <form className="dsmovie-form" onSubmit={handleSubmit}>
           {" "}
           {/* Comandos do usuário */}
