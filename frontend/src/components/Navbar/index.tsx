@@ -9,7 +9,7 @@ function refreshPage() {
 
 function logout() {
 
-  var user = "user";
+  var user = "Login";
   if (localStorage.getItem('user') != null) {
     var tam = localStorage.getItem("user")!.length;
     user = localStorage.getItem("user")!.slice(1, tam - 1);
