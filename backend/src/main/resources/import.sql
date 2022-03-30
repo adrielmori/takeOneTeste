@@ -33,6 +33,7 @@ INSERT INTO tb_movie(score, count, title, image, description, trailer) VALUES (0
 INSERT INTO tb_movie(score, count, title, image, description, trailer) VALUES (0, 0, 'Contato', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/yFkUPqBuUnbhYbQL8VFpTrAT9za.jpg', 'Desde menina, Ellie Arroway sempre buscou indícios de outras vidas no universo, deixando de lado sua vida particular e até mesmo o amor do teólogo Palmer Joss.', 'https://www.youtube.com/embed/UxOjmyvRtxA');
 INSERT INTO tb_movie(score, count, title, image, description, trailer) VALUES (0, 0, 'Duna', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg', 'Paul Atreides é um jovem brilhante, dono de um destino além de sua compreensão.', 'https://www.youtube.com/embed/dnBpZuSUISQ');
 
+
 INSERT INTO tb_score(movie_id, user_id, value, comment) VALUES (1, 1, 5.0, 'filme legal');
 INSERT INTO tb_score(movie_id, user_id, value, comment) VALUES (1, 2, 4.0, 'filme mais ou menos');
 INSERT INTO tb_score(movie_id, user_id, value, comment) VALUES (2, 1, 3.0, 'filme ruim');
