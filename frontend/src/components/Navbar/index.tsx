@@ -1,5 +1,6 @@
 import { ReactComponent as LogoTakeOne } from "assets/img/LogoTakeOne.svg";
 import { ReactComponent as PerfilIcon } from "assets/img/ps.svg";
+import {ReactComponent as Logout} from "assets/img/logout.svg";
 import "./styles.css";
 import { Link } from "react-router-dom";
 
@@ -35,7 +36,13 @@ function logout() {
         </div>
 
         {localStorage.getItem("user") != null &&
-          <button onClick={handleLogout} className="dsmovie-btn-logout">Sair</button>
+        <div className="desmoviecontact-logout">
+          <button onClick={handleLogout} className="dsmovie-btn-logout">
+            <Logout className="desmoviecontact-logout-image"/>
+            Sair
+          </button>
+        </div>
+       
         }
 
       </div>
