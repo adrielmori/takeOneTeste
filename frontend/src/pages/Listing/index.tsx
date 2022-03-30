@@ -57,6 +57,9 @@ function Listing() {
           {/* Analisa filmes de forma individual */}
         </div>
       </div>
+      <Pagination page={page} onChange={handlePageChange} />{/*  */}
+      {/* Aplicando as setas para que a paginação */}
+
     </>
   );
 }

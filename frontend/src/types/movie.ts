@@ -1,3 +1,5 @@
+import { string } from "yup";
+
 export type Movie = {
     id: number;
     title: string;
@@ -6,6 +8,13 @@ export type Movie = {
     image: string;
     trailer: string;
     description: string;
+}
+
+export type Score ={
+    comment: string;
+    scoreUser: number;
+    movieId: number;
+    idUsuario: number;
 }
 
 //definição do tipo

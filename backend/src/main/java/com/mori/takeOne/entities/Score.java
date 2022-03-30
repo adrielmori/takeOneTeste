@@ -27,7 +27,7 @@ public class Score {
 	private String comment;
 
 	public Score() {
-
+		
 	}
 
 	public void setMovie(Movie movie) {// Recebe um certo filme
