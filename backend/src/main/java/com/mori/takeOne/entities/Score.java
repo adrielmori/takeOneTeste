@@ -19,7 +19,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_score")
 public class Score {
-
+	
+	
 	@EmbeddedId
 	private ScorePK id = new ScorePK();//Chave primária
 
@@ -28,6 +29,12 @@ public class Score {
 
 	public Score() {
 		
+	}
+	
+	public Score(ScorePK id, Double value, String comment) {
+		this.id = id;
+		this.value = value;
+		this.comment = comment;
 	}
 
 	public void setMovie(Movie movie) {// Recebe um certo filme
@@ -60,7 +67,7 @@ public class Score {
 		this.comment = comment;
 	}
 
-	public String getComentario() {
+	public String getComment() {
 		return comment;
 	}
 

@@ -10,11 +10,11 @@ export type Movie = {
     description: string;
 }
 
-export type Score ={
+export type Score = {
     comment: string;
     scoreUser: number;
     movieId: number;
-    idUsuario: number;
+    idUser: number;
 }
 
 //definição do tipo
