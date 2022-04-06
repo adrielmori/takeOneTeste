@@ -26,16 +26,15 @@ public class ScoreService {
 	private UserRepository userRepository;
 
 	@Autowired
-	private static ScoreRepository scoreRepository;
+	private ScoreRepository scoreRepository;
 	
 	@Transactional(readOnly = true) // somente para Leitura
-	public static Score getScoreComment(ScorePK id) {// busca individual de componentes
-		Optional<Score> optionalScore = scoreRepository.findById(id);// Deve haver verificação
-		if(optionalScore.isPresent()) {
-			return optionalScore.get();
-		}
-		return null;
+	public ScoreDTO getScore(ScorePK id) {// busca individual de componentes
+		Score result = scoreRepository.findById(id).get();// Deve haver verificação
+		ScoreDTO dto = new ScoreDTO(result);
+		return dto;
 	}
+
 
 	@Transactional
 	public MovieDTO saveScore(ScoreDTO dto) {// Lógica para salver o score no banco de dados

@@ -37,8 +37,8 @@ public class ScoreController {
 	}
 	
 	@RequestMapping(value = "/{movie_id}/{user_id}", method = RequestMethod.GET)
-	public Score ScoreById(@PathVariable Movie movie_id, @PathVariable User user_id) {
+	public ScoreDTO ScoreById(@PathVariable Movie movie_id, @PathVariable User user_id) {
 		ScorePK id = new ScorePK(movie_id, user_id);
-		return ScoreService.getScoreComment(id);
+		return service.getScore(id);
 	} 
 }

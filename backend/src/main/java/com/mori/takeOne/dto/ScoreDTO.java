@@ -1,5 +1,8 @@
 package com.mori.takeOne.dto;
 
+import com.mori.takeOne.entities.Score;
+import com.mori.takeOne.entities.ScorePK;
+
 /**
  * Classe de entrada do usuário para a avaliçao do filme.
  * 
@@ -8,15 +11,31 @@ package com.mori.takeOne.dto;
 
 public class ScoreDTO {
 
+	private ScorePK id;
 	private Long movieId;
 	private String email;
 	private Double score;
 	private String comment;
 
+	
 	public ScoreDTO() {
-
+		
 	}
 	
+	public ScoreDTO(ScorePK id, Long movieId, String email, Double score, String comment) {
+		this.id = id;
+		this.movieId = movieId;
+		this.email = email;
+		this.score = score;
+		this.comment = comment;
+	}
+	
+	public ScoreDTO(Score result) {
+		id= result.getId();
+		comment = result.getComment();
+		score = result.getValue();
+	}
+
 	public Long getMovieId() {
 		return movieId;
 	}
@@ -47,6 +66,6 @@ public class ScoreDTO {
 
 	public String getComment() {
 		return comment;
-	}
+	}	
 
 }
