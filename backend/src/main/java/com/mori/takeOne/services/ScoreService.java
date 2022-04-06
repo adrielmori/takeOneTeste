@@ -31,10 +31,11 @@ public class ScoreService {
 	@Transactional(readOnly = true) // somente para Leitura
 	public ScoreDTO getScore(ScorePK id) {// busca individual de componentes
 		Score result = scoreRepository.findById(id).get();// Deve haver verificação
-		ScoreDTO dto = new ScoreDTO(result);
+		Movie movie = movieRepository.findById(id.getMovie().getId()).get();
+		User user = userRepository.findByEmail(id.getUser().getEmail());
+		ScoreDTO dto = new ScoreDTO(result, movie, user);
 		return dto;
 	}
-
 
 	@Transactional
 	public MovieDTO saveScore(ScoreDTO dto) {// Lógica para salver o score no banco de dados

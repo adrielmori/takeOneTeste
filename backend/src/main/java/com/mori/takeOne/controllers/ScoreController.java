@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mori.takeOne.dto.MovieDTO;
 import com.mori.takeOne.dto.ScoreDTO;
 import com.mori.takeOne.entities.Movie;
-import com.mori.takeOne.entities.Score;
 import com.mori.takeOne.entities.ScorePK;
 import com.mori.takeOne.entities.User;
 import com.mori.takeOne.services.ScoreService;
